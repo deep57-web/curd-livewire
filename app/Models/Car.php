@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Car extends Model
 {
-    use HasFactory;
+    // Allow mass assignment on the following fields
+    protected $fillable = [
+        'car_name',
+        'brand',
+        'capacity',
+        'fuel_type',
+    ];
 }

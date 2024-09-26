@@ -5,6 +5,7 @@
                 <div class="col">
                     <h2>Laravel 11.x + Livewire 3.x CRUD</h2>
     
+            
 
                 </div>
                 <div class="col">
