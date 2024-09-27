@@ -15,3 +15,5 @@ class Car extends Model
         'fuel_type',
     ];
 }
+
+

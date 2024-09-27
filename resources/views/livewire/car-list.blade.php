@@ -27,7 +27,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($cars as $item )
+                    @foreach ($cars as $item)
                     <tr>
                         <td scope="row">{{ $loop->iteration}}</td>
                         <td>{{ $item->car_name}}</td>
@@ -36,7 +36,11 @@
                         <td>{{ $item->fuel_type}}</td>
                         <td><a href="/edit/car/{{$item->id}}" wire:navigate class="btn btn-primary btn-sm">Edit</a></td>
                         <td><button class="btn btn-danger btn-sm" wire:click="delete({{$item->id}})" wire:confirm="Are You Want to Delete This">Delete</button></td>
-                        
+                        <td>
+                          <div class="spinner-grow" role="status" wire:loading wire:target="delete({{$item->id}})">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                        </td>
                       </tr>
                     @endforeach
                  
